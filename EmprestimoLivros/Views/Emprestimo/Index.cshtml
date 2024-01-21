@@ -1,0 +1,63 @@
+﻿@model IEnumerable<EmprestimosModel>
+@{
+    ViewData["Title"] = "Listagem de Empréstimo";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 style="font-size: 40px" class="display-4">Listagem de Empréstimos</h1>
+    <div>
+        <a class="btn" style="background-color: #800080; color: white" asp-controller="Emprestimo" asp-action="Cadastrar">Cadastrar novo Empréstimo</a>
+    </div>
+</div>
+
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+
+<table id="emprestimos" class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Recebedor</th>
+            <th scope="col">Fornecedor</th>
+            <th scope="col">Livro</th>
+            <th scope="col">Última Atualização</th> 
+            <th scope="col">Prevista devolução</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th> 
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null)
+        {
+            @foreach(var emprestimo in Model)
+            {
+                <tr>
+                    <th scope="row">@emprestimo.Recebedor</th>
+                    <td>@emprestimo.Fornecedor</td>
+                    <td>@emprestimo.NomeDoLivro</td>
+                    <td>@emprestimo.DataUltimaAtualizacao</td>
+                    <td>@emprestimo.DataDevolucaoPrevista.ToString("dd/MM/yyyy")</td>
+                    <td>@emprestimo.StatusEmprestimo</td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a asp-controller="Emprestimo" asp-action="Editar" asp-route-id="@emprestimo.Id" role="button" class="btn me-md-2" style="background-color: #cda7e0; color: white">
+                                Editar
+                            </a>
+                            <a asp-controller="Emprestimo" asp-action="Apagar" asp-route-id="@emprestimo.Id" role="button" class="btn" style="background-color: #3c005a; color: white">
+                                Apagar
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+
+            
+        }
+       
+    </tbody>
+</table>
