@@ -41,8 +41,6 @@ namespace EmprestimoLivros.Repositorio
 
             usuarioContext.Nome = usuario.Nome;
             usuarioContext.Email = usuario.Email;
-            usuarioContext.Senha = usuario.Senha;
-            usuarioContext.Login = usuario.Login;
             usuarioContext.Perfil = usuario.Perfil;
             usuarioContext.DataAlteracaoUsuario = DateTime.Now;
 

@@ -27,10 +27,10 @@ namespace EmprestimoLivros.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Copia os dados do RegisterViewModel para o IdentityUser
                 var user = new Usuario
                 {
                     UserName = model.Nome,
+                    Nome = model.Nome,
                     Email = model.Email
                 };
 

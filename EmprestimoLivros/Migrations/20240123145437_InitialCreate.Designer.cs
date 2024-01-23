@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmprestimoLivros.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240123140604_InitialCreate")]
+    [Migration("20240123145437_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
