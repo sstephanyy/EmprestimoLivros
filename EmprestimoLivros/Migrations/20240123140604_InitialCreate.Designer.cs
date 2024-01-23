@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmprestimoLivros.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240122213452_InitialCreate")]
+    [Migration("20240123140604_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -114,7 +114,6 @@ namespace EmprestimoLivros.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Login")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nome")

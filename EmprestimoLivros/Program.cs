@@ -1,4 +1,5 @@
 using EmprestimoLivros.Data;
+using EmprestimoLivros.Models;
 using EmprestimoLivros.Repositorio;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -16,11 +17,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+builder.Services.AddIdentity<Usuario, IdentityRole>(options =>
     {
         options.SignIn.RequireConfirmedPhoneNumber = false;
-    
+
     }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+ 
+
 
 
 var app = builder.Build();

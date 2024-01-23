@@ -1,4 +1,5 @@
-﻿using EmprestimoLivros.ViewModels;
+﻿using EmprestimoLivros.Models;
+using EmprestimoLivros.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,10 +7,10 @@ namespace EmprestimoLivros.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<Usuario> userManager;
+        private readonly SignInManager<Usuario> signInManager;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
@@ -27,7 +28,7 @@ namespace EmprestimoLivros.Controllers
             if (ModelState.IsValid)
             {
                 // Copia os dados do RegisterViewModel para o IdentityUser
-                var user = new IdentityUser
+                var user = new Usuario
                 {
                     UserName = model.Nome,
                     Email = model.Email

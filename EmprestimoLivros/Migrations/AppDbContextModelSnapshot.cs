@@ -111,7 +111,6 @@ namespace EmprestimoLivros.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Login")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nome")
