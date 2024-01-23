@@ -14,18 +14,18 @@ namespace EmprestimoLivros.Repositorio
         {
             _context = context;
         }
-        public UsuarioModel BuscarUsuarioPorId(int id)
+        public Usuario BuscarUsuarioPorId(int id)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Id == id);
             
         }
 
-        public List<UsuarioModel> BuscarUsuarios()
+        public List<Usuario> BuscarUsuarios()
         {
             return _context.Usuarios.ToList();
         }
 
-        public UsuarioModel AdicionarUsuario(UsuarioModel usuario)
+        public Usuario AdicionarUsuario(Usuario usuario)
         {
             usuario.DataCadastro = DateTime.Now;
             _context.Usuarios.Add(usuario);
@@ -33,9 +33,9 @@ namespace EmprestimoLivros.Repositorio
             return usuario;
         }
 
-        public UsuarioModel AtualizarUsuario(UsuarioModel usuario)
+        public Usuario AtualizarUsuario(Usuario usuario)
         {
-           UsuarioModel usuarioContext = BuscarUsuarioPorId(usuario.Id);
+           Usuario usuarioContext = BuscarUsuarioPorId(usuario.Id);
 
             if (usuarioContext == null) throw new Exception("Houve um erro na atualização do usuário");
 
@@ -54,7 +54,7 @@ namespace EmprestimoLivros.Repositorio
 
         public bool ApagarUsuario(int id)
         {
-            UsuarioModel usuarioContext = BuscarUsuarioPorId(id);
+            Usuario usuarioContext = BuscarUsuarioPorId(id);
 
             if (usuarioContext == null) throw new Exception("Houve um erro na exclusão do usuário");
 

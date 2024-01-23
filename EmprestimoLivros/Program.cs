@@ -1,5 +1,6 @@
 using EmprestimoLivros.Data;
 using EmprestimoLivros.Repositorio;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+    {
+        options.SignIn.RequireConfirmedPhoneNumber = false;
+    
+    }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,6 +37,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

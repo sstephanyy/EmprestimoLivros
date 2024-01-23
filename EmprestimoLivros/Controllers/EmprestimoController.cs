@@ -1,5 +1,6 @@
 ﻿using EmprestimoLivros.Data;
 using EmprestimoLivros.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmprestimoLivros.Controllers
@@ -16,7 +17,7 @@ namespace EmprestimoLivros.Controllers
         public IActionResult Index()
         {
             //acessando a tabela emprestimos no db
-            IEnumerable<EmprestimosModel> emprestimos = _context.Emprestimos;
+            IEnumerable<Emprestimo> emprestimos = _context.Emprestimos;
             
             return View(emprestimos);
         }
@@ -37,7 +38,7 @@ namespace EmprestimoLivros.Controllers
 
             }
             // basicamente é um WHERE no banco de dados
-            EmprestimosModel emprestimo = _context.Emprestimos.FirstOrDefault(x => x.Id == id);
+            Emprestimo emprestimo = _context.Emprestimos.FirstOrDefault(x => x.Id == id);
 
             if(emprestimo == null)
             {
@@ -56,7 +57,7 @@ namespace EmprestimoLivros.Controllers
 
             }
 
-            EmprestimosModel emprestimo = _context.Emprestimos.FirstOrDefault(x =>x.Id == id);
+            Emprestimo emprestimo = _context.Emprestimos.FirstOrDefault(x =>x.Id == id);
 
             if (emprestimo == null)
             {
@@ -68,7 +69,7 @@ namespace EmprestimoLivros.Controllers
 
 
         [HttpPost]
-        public IActionResult Cadastrar(EmprestimosModel emprestimos)
+        public IActionResult Cadastrar(Emprestimo emprestimos)
         {
             if(ModelState.IsValid)
             {
@@ -84,7 +85,7 @@ namespace EmprestimoLivros.Controllers
         }
 
         [HttpPost]
-        public IActionResult Editar(EmprestimosModel emprestimo)
+        public IActionResult Editar(Emprestimo emprestimo)
         {
             if(ModelState.IsValid)
             {
@@ -101,7 +102,7 @@ namespace EmprestimoLivros.Controllers
         }
 
         [HttpPost]
-        public IActionResult Apagar(EmprestimosModel emprestimo)
+        public IActionResult Apagar(Emprestimo emprestimo)
         {
             if (emprestimo == null)
             {
