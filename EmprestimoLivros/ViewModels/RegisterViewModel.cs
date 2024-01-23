@@ -5,7 +5,7 @@ namespace EmprestimoLivros.ViewModels
     //ViewModel ->  It acts as an abstraction of the view and is responsible for exposing data and commands to the view
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Nome é obrigatório")]
         public string Nome { get; set; }
 
         [Required]
