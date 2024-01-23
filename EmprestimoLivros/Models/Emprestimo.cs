@@ -2,7 +2,7 @@
 
 namespace EmprestimoLivros.Models
 {
-    public class EmprestimosModel
+    public class Emprestimo
     {
         public int Id { get; set; }
 
