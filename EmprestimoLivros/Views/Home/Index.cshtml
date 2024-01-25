@@ -1,8 +1,58 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<main class="main">
+    @* HOME *@
+    <section class="home section" id="home">
+        <div class="home__container containerhome grid">
+            <div class="home__data">
+                <h1 class="home__title">
+                    Encontre livros & Doe livros!
+                </h1>
+
+                <p class="home__description">
+                    O conhecimento deve ser compartilhado 
+                    a todos que o buscam. Aqui, não apenas exploramos livros, mas também compartilhamos histórias, conectando leitores apaixonados de todo o mundo.
+                </p>
+
+                <a href="#" class=" expl-button">Explore Agora</a>
+            </div>
+
+            <div class="home__images">
+                <div class="home__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="home__article swiper-slide">
+                            <img src="~/Assets/home-book-1.png" class="home__img" />
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                            <img src="~/Assets/home-book-2.png" class="home__img" />
+
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                            <img src="~/Assets/home-book-3.png" class="home__img" />
+
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                            <img src="~/Assets/home-book-4.png" class="home__img" />
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @*     SERVICES *@
+
+    <section class="services section">
+
+    </section>
+
+</main>
