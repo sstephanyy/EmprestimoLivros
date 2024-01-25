@@ -80,7 +80,7 @@ let swiperDemo = new Swiper('.demo__swiper', {
 
     breakpoints: {
         1150: {
-            slidesPerView: -4,
+            slidesPerView: 4,
             centeredSlides: false,
         }
     }
