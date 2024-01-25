@@ -126,6 +126,7 @@ img {
 .expl-button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
+    color: white;
 }
 
 /* - -------------------- Home ---------------- ---*/
@@ -175,3 +176,79 @@ img {
 .swiper-slide-duplicate-active{
     scale: 1;
 }
+
+/* - -------------------- Features ---------------- ---*/
+.features__container {
+    row-gap: 3rem;
+    text-align: center;
+}
+
+.features__card{
+    text-align: center;
+}
+
+    .features__card i {
+        display: block;
+        font-size: 3rem;
+        color: #7163ba;
+        margin-bottom: 1rem;
+    }
+
+.features_title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1rem;
+}
+
+
+
+/* - -------------------- Demos ---------------- ---*/
+
+.demo__card {
+    position: relative;
+    text-align: center;
+    background-color: var(--container-color);
+    padding: 2rem;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: border .4s, background-color .4s;
+}
+
+.demo__img{
+    width: 150px;
+    margin: 0 auto .75rem;
+}
+
+.demo__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: .5rem;
+}
+
+.ask-demo {
+    display: inline-block;
+    background-color: #3c005a;
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    padding: .3rem .5rem;
+}
+
+.demo__actions{
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: .75rem;
+    position: absolute;
+    top: 2rem;
+    right: -2.0rem;
+    transition: right .4s;
+}
+
+    .demo__actions button {
+        background: none;
+        font-size: 1.5rem;
+        color: #3c005a;
+        cursor: pointer;
+    }
+
+
+    .demo__card:hover .demo__actions{
+        right: 2.0rem;
+    }
