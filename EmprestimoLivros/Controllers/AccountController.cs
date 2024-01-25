@@ -31,7 +31,9 @@ namespace EmprestimoLivros.Controllers
                 {
                     UserName = model.Nome,
                     Nome = model.Nome,
-                    Email = model.Email
+                    Email = model.Email,
+                    DataCadastro = DateTime.Now
+
                 };
 
                 // armazena os dados do usuário na tabela AspNetUsers

@@ -6,12 +6,12 @@ namespace EmprestimoLivros.Repositorio
     {
         List<Usuario> BuscarUsuarios();
 
-        Usuario BuscarUsuarioPorId(int id);
+        Usuario BuscarUsuarioPorId(string id);
 
         Usuario AdicionarUsuario(Usuario usuario);
 
         Usuario AtualizarUsuario(Usuario usuario);
 
-        bool ApagarUsuario (int id);
+        bool ApagarUsuario (string id);
     }
 }
