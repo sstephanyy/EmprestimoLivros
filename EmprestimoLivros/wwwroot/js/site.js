@@ -39,3 +39,25 @@
     }, 3000)
 
 });
+
+let swiperHome = new Swiper('.home__swiper', {
+    // Optional parameters,
+    loop: true,
+    spaceBetween: -24,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    breakpoints: {
+        1220: {
+            spaceBetween: -32,
+        }
+    }
+
+    
+});
