@@ -4,14 +4,14 @@ namespace EmprestimoLivros.Repositorio
 {
     public interface IUsuario
     {
-        List<UsuarioModel> BuscarUsuarios();
+        List<Usuario> BuscarUsuarios();
 
-        UsuarioModel BuscarUsuarioPorId(int id);
+        Usuario BuscarUsuarioPorId(string id);
 
-        UsuarioModel AdicionarUsuario(UsuarioModel usuario);
+        Usuario AdicionarUsuario(Usuario usuario);
 
-        UsuarioModel AtualizarUsuario(UsuarioModel usuario);
+        Usuario AtualizarUsuario(Usuario usuario);
 
-        bool ApagarUsuario (int id);
+        bool ApagarUsuario (string id);
     }
 }
