@@ -51,7 +51,7 @@ namespace EmprestimoLivros.Controllers
             }
         }
         [HttpGet]
-        public IActionResult Editar(int id)
+        public IActionResult Editar(string id)
         {
             // Recupere o usuário com o ID especificado do repositório
             Usuario usuario = _usuarioRepositorio.BuscarUsuarioPorId(id);
@@ -85,14 +85,14 @@ namespace EmprestimoLivros.Controllers
                 return RedirectToAction("Index");
             }
         }
-        public IActionResult Apagar(int id)
+        public IActionResult Apagar(string id)
         {
             Usuario usuario = _usuarioRepositorio.BuscarUsuarioPorId(id);
             return View(usuario);
 
         }
 
-        public IActionResult ApagarConfirmacao(int id)
+        public IActionResult ApagarConfirmacao(string id)
         {
             try
             {

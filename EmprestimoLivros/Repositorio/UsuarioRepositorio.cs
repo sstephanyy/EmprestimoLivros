@@ -14,7 +14,7 @@ namespace EmprestimoLivros.Repositorio
         {
             _context = context;
         }
-        public Usuario BuscarUsuarioPorId(int id)
+        public Usuario BuscarUsuarioPorId(string id)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Id == id);
             
@@ -50,7 +50,7 @@ namespace EmprestimoLivros.Repositorio
             return usuarioContext;
         }
 
-        public bool ApagarUsuario(int id)
+        public bool ApagarUsuario(string id)
         {
             Usuario usuarioContext = BuscarUsuarioPorId(id);
 
