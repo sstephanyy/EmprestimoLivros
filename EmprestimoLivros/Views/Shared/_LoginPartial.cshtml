@@ -1,5 +1,39 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿
+<style>
+    .cadastro {
+        color: #3c005a;
+        display: flex;
+        margin: auto 0;
+    }
+
+    .cadastro a{
+       color: #3c005a;   
+    }
+
+    .cadastro a:hover{
+         color: #a0a6da;
+    }
+
+     /* Media query for small screens */
+    @@media screen and (max-width: 767px) {
+        .cadastro {
+            flex-direction: column;
+            padding: 0;
+            
+        }
+
+        .cadastro a{
+                color: black;
+        }
+    }
+
+
+
+</style>
+
+@using Microsoft.AspNetCore.Identity
 @inject SignInManager<Usuario> SignInManager
+
 
 @if (SignInManager.IsSignedIn(User))
 {
@@ -14,9 +48,9 @@
 }
 else
 {
-    <ul class="nav-item d-flex">
-        <a class="nav-link" asp-controller="account" asp-action="Register">Criar Conta</a>
-        <a class="nav-link" asp-controller="account" asp-action="Login">Login</a>
+    <ul class="nav-item cadastro">
+        <a class="nav-link navbar-nav flex-grow-1" asp-controller="account" asp-action="Register">Criar Conta</a>
+        <a class="nav-link navbar-nav flex-grow-1" asp-controller="account" asp-action="Login">Login</a>
 
     </ul>
   

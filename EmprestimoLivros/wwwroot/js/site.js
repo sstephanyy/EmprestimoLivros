@@ -80,10 +80,30 @@ let swiperDemo = new Swiper('.demo__swiper', {
 
     breakpoints: {
         1150: {
-            slidesPerView: -4,
+            slidesPerView: 4,
             centeredSlides: false,
         }
     }
 
 
 });
+
+
+function toggleAnswer(answerId) {
+    var answer = document.getElementById(answerId);
+    answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+}
+
+/* --------------- SCROLL REVEAL ANIMATION -------------- */
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
+
+sr.reveal('.home__data, .demo_container, .questions__container');
+sr.reveal('.home__images', { delay: 600 });
+sr.reveal('.features__card', { interval: 100 });
+sr.reveal('.home__images', { delay: 600 });

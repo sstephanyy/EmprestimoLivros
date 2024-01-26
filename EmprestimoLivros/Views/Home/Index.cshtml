@@ -100,6 +100,196 @@
         </div>
     </section>
 
+    <section class="demo section" id="demo">
+        <h2 class="section__title">
+            Livros mais Emprestados:
+        </h2>
 
-    
-    </main>
+        <div class="demo_container containerhome">
+            <div class="demo__swiper swiper">
+                <div class="swiper-wrapper">
+                    <article class="demo__card swiper-slide">
+                        <img src="~/Assets/book-1.png" class="demo__img" />
+
+                        <h2 class="demo__title">Livro</h2>
+
+                        <a class="btn ask-demo">
+                            Pedir emprestado<i class="bi bi-hand-index-thumb"></i>
+                        </a>
+
+
+                        <div class="demo__actions">
+                            <button><i class="bi bi-geo-alt"></i></button>
+                            <button><i class="bi bi-bookmark-heart"></i></button>
+                            <button><i class="bi bi-eye-fill"></i></button>
+                        </div>
+
+                    </article>
+
+                    <article class="demo__card swiper-slide">
+                        <img src="~/Assets/book-5.png" class="demo__img" />
+
+                        <h2 class="demo__title">Livro3</h2>
+
+                        <a class="btn ask-demo">
+                            Pedir emprestado<i class="bi bi-hand-index-thumb"></i>
+                        </a>
+
+                        <div class="demo__actions">
+                            <button><i class="bi bi-geo-alt"></i></button>
+                            <button><i class="bi bi-bookmark-heart"></i></button>
+                            <button><i class="bi bi-eye-fill"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="demo__card swiper-slide">
+                        <img src="~/Assets/book-4.png" class="demo__img" />
+
+                        <h2 class="demo__title">Livro3</h2>
+
+                        <a class="btn ask-demo">
+                            Pedir emprestado<i class="bi bi-hand-index-thumb"></i>
+                        </a>
+
+                        <div class="demo__actions">
+                            <button><i class="bi bi-geo-alt"></i></button>
+                            <button><i class="bi bi-bookmark-heart"></i></button>
+                            <button><i class="bi bi-eye-fill"></i></button>
+                        </div>
+                    </article>
+
+                    <article class="demo__card swiper-slide">
+                        <img src="~/Assets/book-8.png" class="demo__img" />
+
+                        <h2 class="demo__title">Livro</h2>
+
+                        <a class="btn ask-demo">Pedir emprestado </a>
+
+                        <div class="demo__actions">
+                            <button><i class="bi bi-geo-alt"></i></button>
+                            <button><i class="bi bi-bookmark-heart"></i></button>
+                            <button><i class="bi bi-eye-fill"></i></button>
+                        </div>
+
+                    </article>
+
+                    <article class="demo__card swiper-slide">
+                        <img src="~/Assets/book-5.png" class="demo__img" />
+
+                        <h2 class="demo__title">Livro</h2>
+
+                        <a class="btn ask-demo">
+                            Pedir emprestado<i class="bi bi-hand-index-thumb"></i>
+
+                        </a>
+
+                        <div class="demo__actions">
+                            <button><i class="bi bi-geo-alt"></i></button>
+                            <button><i class="bi bi-bookmark-heart"></i></button>
+                            <button><i class="bi bi-eye-fill"></i></button>
+                        </div>
+
+                    </article>
+
+                    <article class="demo__card swiper-slide">
+                        <img src="~/Assets/book-8.png" class="demo__img" />
+
+                        <h2 class="demo__title">Livro</h2>
+
+                        <a class="btn ask-demo">Pedir emprestado </a>
+
+                        <div class="demo__actions">
+                            <button><i class="bi bi-geo-alt"></i></button>
+                            <button><i class="bi bi-bookmark-heart"></i></button>
+                            <button><i class="bi bi-eye-fill"></i></button>
+                        </div>
+
+                    </article>
+
+
+                </div>
+                <div class="swiper-button-prev" style="color: #7163ba;"></div>
+                <div class="swiper-button-next" style="color: #7163ba;"></div>
+
+            </div>
+        </div>
+    </section>
+
+    @* --------------- PERGUNTAS ------------------------ *@
+    <section class="questions section" id="qustions">
+        <div class="questions__container containerhome grid">
+
+            <h2 class="questions__title section__title">
+                 Perguntas & Respostas
+            </h2>
+
+            <div class="questions-data" id="question1">
+                <div class="d-flex gap-2">
+                    <i class="bi bi-caret-right-fill"></i>
+                    <h3 onclick="toggleAnswer('answer1')">Os livros emprestados são totalmente GRATUITOS?</h3>
+                </div>
+               
+                <div id="answer1" class="answer">
+                    <p>Sim. Justamente porque queremos criar uma comunidade dedicada à troca de conhecimento e experiências literárias.</p>
+                </div>
+            </div>
+
+             <div class="questions-data" id="question2">
+
+                <div class="d-flex gap-2">
+                    <i class="bi bi-caret-right-fill"></i>
+                    <h3 onclick="toggleAnswer('answer2')">Como sei se alguém está interessado no livro que estou disposto a emprestar? </h3>
+                </div>
+
+
+                <div id="answer2" class="answer">
+                    <p>Você será notificado automaticamente na seção "Empréstimos Pendentes" sempre que alguém solicitar um livro seu. Basta verificar essa seção para aprovar ou recusar as solicitações.</p>
+                </div>
+            </div>
+
+            <div class="questions-data" id="question3">
+                
+                <div class="d-flex gap-2">
+                    <i class="bi bi-caret-right-fill"></i>
+                    <h3 onclick="toggleAnswer('answer3')">Posso estender o prazo de devolução de um livro que emprestei?</h3>
+                </div>
+
+
+                <div id="answer3" class="answer">
+                    <p>Sim, é possível negociar prazos de devolução. Entre em contato com o usuário que pegou emprestado através da seção de "Meus Livros" para discutir a possibilidade </p>
+                </div>
+            </div>
+
+             <div class="questions-data" id="question4">
+
+                <div class="d-flex gap-2">
+                    <i class="bi bi-caret-right-fill"></i>
+                    <h3 onclick="toggleAnswer('answer4')">Existe alguma restrição de distância para empréstimos?</h3>
+                </div>
+
+
+                <div id="answer4" class="answer">
+                    <p>Não há restrições de distância. O sistema conecta leitores de diversas localidades, permitindo empréstimos entre usuários independentemente da distância física.</p>
+                </div>
+            </div>
+
+            <div class="questions-data" id="question5">
+
+                <div class="d-flex gap-2">
+                    <i class="bi bi-caret-right-fill"></i>
+                    <h3 onclick="toggleAnswer('answer5')">E se eu precisar cancelar um pedido de empréstimo já feito?</h3>
+                </div>
+
+
+                <div id="answer5" class="answer">
+                    <p>Você pode cancelar um pedido de empréstimo pendente na seção "Empréstimos Pendentes" antes que o dono do livro aprove a solicitação.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    @* --------------- Scroll up ------------------------ *@
+
+
+</main>
