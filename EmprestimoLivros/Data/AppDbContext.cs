@@ -23,7 +23,10 @@ namespace EmprestimoLivros.Data
         }
 
         public DbSet<Emprestimo> Emprestimos { get; set;}
+        public DbSet<Role> ApplicationRoles { get; set; }
 
         public DbSet<Usuario> Usuarios { get; set;}
+
+        public DbSet<SolicitarEmprestimo> EmprestimosSolicitados { get; set;}
     }
 }

@@ -14,8 +14,20 @@ namespace EmprestimoLivros.Data.Configurations
                 .HasMaxLength(190)
                 .IsRequired();
 
-
             
+            builder.Property(x => x.Email)
+                .IsRequired();
+
+            builder.Property(x => x.Perfil)
+                .HasColumnName("Perfil");
+
+            builder.Property(x => x.DataCadastro)
+                .HasColumnName("DataCadastro");
+
+            builder.Property(x => x.DataAlteracaoUsuario)
+                .HasColumnName("DataAlteracaoUsuario");
+
+
         }
     }
 }
