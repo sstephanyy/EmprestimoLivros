@@ -117,5 +117,27 @@ namespace EmprestimoLivros.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Solicitar()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Solicitar(SolicitarEmprestimo solitarlivro)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.EmprestimosSolicitados.Add(solitarlivro);
+
+                TempData["MensagemSucesso"] = "Pedido de empréstimo enviado com sucesso!";
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
+        }
+
     }
+
 }

@@ -1,0 +1,56 @@
+﻿@model SolicitarEmprestimo
+@{
+    ViewData["title"] = "Solicitar Empréstimo";
+}
+
+<style>
+
+
+    .container-cadastro {
+        width: 580px;
+        background: rgba(234, 191, 255, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px 19px;
+        margin: 0 auto;
+        margin-top: 90px; /* Add margin-top to separate from the navbar */
+    }
+</style>
+<div class="container-cadastro">
+
+    <div class="mb-5 text-center">
+        <h1 style="background-color: #3c005a; color: white">Solicitação de Empréstimo</h1>
+    </div>
+
+    <form method="post" asp-controller="Emprestimo" asp-action="Solicitar">
+        <div class="mb-3">
+            <label for="SolicitanteNome" class="form-label">Nome: </label>
+            <input type="text" class="form-control" asp-for="SolicitanteNome" id="solicitante" placeholder="Seu nome: ">
+            <span class="text-danger" asp-validation-for="SolicitanteNome"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Livro" class="form-label">Livro: </label>
+            <input type="text" class="form-control" asp-for="NomeDoLivro" id="livro" placeholder="Qual o nome do livro?">
+            <span class="text-danger" asp-validation-for="NomeDoLivro"></span>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="dtaDevolucao" class="form-label">Data Prevista da Devolução: </label>
+            <input type="date" class="form-control" asp-for="DataDevolucao" id="dtadevolucao" placeholder="Qual a data prevista da devolução do livro?">
+
+        </div>
+
+
+        <div class="d-flex gap-5 mt-5">
+            <button type="submit" class="btn w-50" style="background-color: #3c005a; color: white">Solicitar</button>
+            <a class="btn w-50" style="background-color: #800080; color: white" asp-controller="Emprestimo" asp-action="Index">Voltar</a>
+        </div>
+
+    </form>
+</div>
+

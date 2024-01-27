@@ -231,6 +231,9 @@ img {
     font-weight: var(--font-semi-bold);
     padding: .3rem .5rem;
 }
+.ask-demo:hover{
+    color: white;
+}
 
 .demo__actions{
     display: inline-flex;
