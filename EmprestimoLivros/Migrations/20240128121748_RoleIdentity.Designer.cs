@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmprestimoLivros.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240127202746_ApplicationRoles")]
-    partial class ApplicationRoles
+    [Migration("20240128121748_RoleIdentity")]
+    partial class RoleIdentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
