@@ -5,7 +5,7 @@
 namespace EmprestimoLivros.Migrations
 {
     /// <inheritdoc />
-    public partial class ApplicationRoles : Migration
+    public partial class RoleIdentity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

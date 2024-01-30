@@ -17,7 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
 
-builder.Services.AddIdentity<Usuario, IdentityRole>(options =>
+builder.Services.AddIdentity<Usuario, Role>(options =>
     {
         options.SignIn.RequireConfirmedPhoneNumber = false;
 
