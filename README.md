@@ -19,11 +19,6 @@ Bem-vindo ao Sistema de Empréstimo de Livros, uma plataforma dedicada a tornar 
 - Mantenha-se atualizado sobre os empréstimos pendentes que requerem sua ação.
 - Receba notificações sobre solicitações de empréstimo e aja prontamente.
 
-### Histórico de Empréstimos
-
-- Tenha acesso a um registro completo de todos os empréstimos anteriores.
-- Explore seu histórico de transações para revisitar livros emprestados no passado.
-
 ### Solicitar Empréstimo
 
 - Solicite livros específicos de outros usuários de forma rápida e fácil.
