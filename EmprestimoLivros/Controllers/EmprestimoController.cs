@@ -14,6 +14,7 @@ namespace EmprestimoLivros.Controllers
         {
             _context = context;
         }
+        [Authorize]
         public IActionResult Index()
         {
             //acessando a tabela emprestimos no db

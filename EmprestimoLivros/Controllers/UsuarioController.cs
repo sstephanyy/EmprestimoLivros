@@ -2,6 +2,8 @@
 using EmprestimoLivros.Models;
 using EmprestimoLivros.Repositorio;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace EmprestimoLivros.Controllers
 {
@@ -14,6 +16,7 @@ namespace EmprestimoLivros.Controllers
             _usuarioRepositorio = usuarioRepositorio;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Index()
         {
